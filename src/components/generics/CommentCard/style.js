@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Theme } from "../../../utils/themes/ theme";
 
 export const CommentCardStyle = styled.section`
-  width: 800px;
+  width: ${({isReply}) => isReply ? "90%" : "100%" };
 
   padding: 20px;
 

@@ -11,9 +11,9 @@ export default function Comments() {
 
   return (
     <CommentsStyle>
-      {comments.map(({ id, content, createdAt, score, user }) => (
+      {comments.map(({ id, content, createdAt, score, user, replies }) => (
         <CommentCard key={id} content={content} createdAt={createdAt} score={score}
-          username={user.username} />
+          username={user.username} replies={replies} isReply={false} />
       ))}
     </CommentsStyle>
   )

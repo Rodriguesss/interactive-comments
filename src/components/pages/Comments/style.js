@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CommentsStyle = styled.div`
-  width: 100%;
+  width: 630px;
 
   display: flex;
   flex-direction: column;
