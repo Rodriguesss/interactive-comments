@@ -12,24 +12,28 @@ export default function LikeCounter({ number }) {
   }
 
   function addLike() {
+    if(operation === "-") return
+
     operation === "" ? handleNumberState("+", "+") : handleNumberState("", "-")
   }
 
   function removeLike() {
+    if(operation === "+") return
+
     operation === "" ? handleNumberState("-", "-") : handleNumberState("", "+")
   }
 
   function handleNumberState(simbol, operation) {
-     // eslint-disable-next-line
-    setNumberState((operation, eval)(`${numberState} ${operation} ${1}`))
+    // eslint-disable-next-line
+    setNumberState((0, eval)(`${numberState} ${operation} 1`))
     setOperation(simbol)
   }
 
   return (
     <LikeCounterStyle>
-      <Operation onClick={() => handleLike("+")}>+</Operation>
+      <Operation operation={operation} simbol="+" onClick={() => handleLike("+")}>+</Operation>
       <Like number={numberState} />
-      <Operation onClick={() => handleLike("-")}>-</Operation>
+      <Operation operation={operation} simbol="-" onClick={() => handleLike("-")}>-</Operation>
     </LikeCounterStyle>
   )
 }

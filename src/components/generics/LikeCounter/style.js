@@ -22,13 +22,15 @@ const LikeCounterStyle = styled.div`
 
 const Operation = styled.button`
   font-weight: bold;
-  color: ${Theme.primary["lightGrayishBlue"]};
+  color: ${({ operation, simbol }) =>
+    operation === simbol ? Theme.primary["moderateBlue"] : Theme.primary["lightGrayishBlue"]
+  };
 
   :hover {
-    color: ${Theme.primary["moderateBlue"]};
-  }
+  color: ${Theme.primary["moderateBlue"]};
+}
 
-  cursor: pointer;
+cursor: pointer;
 `
 
 export {
