@@ -15,7 +15,7 @@ import Comments from "./pages/Comments"
 import { Data } from "../data/data"
 
 export default function App() {
-  const [data] = useState(Data)
+  const [data, setData] = useState(Data)
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function App() {
 
       <Main>
         <BrowserRouter>
-          <UserContext.Provider value={{data}}>
+          <UserContext.Provider value={{data, setData}}>
             <Routes>
               <Route path="/" element={<Comments />} />
             </Routes>

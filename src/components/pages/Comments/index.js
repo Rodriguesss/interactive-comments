@@ -14,7 +14,7 @@ export default function Comments() {
     <ContainerComment>
       <CommentsStyle>
         {comments.map(({ id, content, createdAt, score, user, replies }) => (
-          <CommentCard key={id} content={content} createdAt={createdAt} score={score}
+          <CommentCard key={id} id={id} content={content} createdAt={createdAt} score={score}
             username={user.username} replies={replies} isReply={false} />
         ))}
       </CommentsStyle>
