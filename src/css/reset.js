@@ -51,4 +51,17 @@ export const ResetStyle = createGlobalStyle`
     all: unset;
     box-sizing: border-box;
   }
+  textarea {
+    // other stuff
+    -moz-appearance:none;
+    outline:0px none transparent;
+  }
+  
+  textarea:focus, input:focus{
+      outline: 0;
+  }
+  
+  *:focus {
+      outline: 0;
+  }
 `
