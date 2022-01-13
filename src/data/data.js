@@ -60,8 +60,8 @@ export const Data = {
               "webp": "./images/avatars/image-juliusomo.webp"
             },
             "username": "juliusomo"
-          }
-        }
+          }, 
+        },
       ]
     }
   ]

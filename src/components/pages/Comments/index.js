@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UserContext from "../../../utils/context/UserContext";
 
 import CommentCard from "../../generics/CommentCard"
@@ -8,7 +8,7 @@ import { CommentsStyle, ContainerComment } from "./style";
 
 export default function Comments() {
   const { data } = useContext(UserContext)
-  const { comments } = data;
+  const [comments, setComments] = useState(data.comments);
 
   return (
     <ContainerComment>
@@ -18,7 +18,7 @@ export default function Comments() {
             username={user.username} replies={replies} isReply={false} />
         ))}
       </CommentsStyle>
-      <PostComment />
+      <PostComment setComments={setComments} />
     </ContainerComment>
   )
 }

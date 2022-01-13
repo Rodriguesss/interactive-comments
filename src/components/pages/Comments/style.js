@@ -6,7 +6,6 @@ const CommentsStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
   gap: 10px;
 
   margin-top: 5%;

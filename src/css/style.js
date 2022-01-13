@@ -7,7 +7,7 @@ export const Style = createGlobalStyle`
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
 
-    background-color: ${Theme.default["lightGray"]};
+    background-color: ${Theme.default["veryLightGray"]};
   }
 
   * {

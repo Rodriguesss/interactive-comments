@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Like from "../../atomics/Like";
+
 import { LikeCounterStyle, Operation } from "./style";
 
 export default function LikeCounter({ number }) {
@@ -13,17 +14,17 @@ export default function LikeCounter({ number }) {
 
   function addLike() {
     if(operation === "-") return
-
-    operation === "" ? handleNumberState("+", "+") : handleNumberState("", "-")
+    
+    operation === "" ? handleOperation("+", "+") : handleOperation("", "-")
   }
 
   function removeLike() {
     if(operation === "+") return
 
-    operation === "" ? handleNumberState("-", "-") : handleNumberState("", "+")
+    operation === "" ? handleOperation("-", "-") : handleOperation("", "+")
   }
 
-  function handleNumberState(simbol, operation) {
+  function handleOperation(simbol, operation) {
     // eslint-disable-next-line
     setNumberState((0, eval)(`${numberState} ${operation} 1`))
     setOperation(simbol)

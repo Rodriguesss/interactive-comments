@@ -5,7 +5,7 @@ import { Theme } from "../../../utils/themes/ theme";
 const LikeCounterStyle = styled.div`
   background-color: ${Theme.default["lightGray"]};
 
-  height: 100%;
+  width: 40px;
 
   padding: 10px;
 
